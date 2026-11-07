@@ -7,7 +7,7 @@ program outputs, and Lab 2 report.
 - percepts.py
 - model.py
 - check.py
-- Lab2_Report_Black_Text_No_Tables.docx
+  
 
 ## Run
 python percepts.py
