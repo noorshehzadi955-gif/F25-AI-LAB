@@ -5,7 +5,7 @@ evaluate, so the amount of work saved by pruning can be compared.
 
 ## Files
 - `minimax.py` - Python code for Minimax, Alpha-Beta pruning and the comparison tests
-- `Lab5_Report_Rasikh_Ali.docx` - Lab report with output, hand traces and analysis
+  
 
 ## How to Run
 python minimax.py
