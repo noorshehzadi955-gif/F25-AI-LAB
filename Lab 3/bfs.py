@@ -1,33 +1,34 @@
-# 1. BFS (Breadth-First Search)
+ 1. BFS (Breadth-First Search)
+
 from collections import deque
 
 graph = {
-    'A': ['B', 'C'],
-    'B': ['D', 'E'],
-    'C': ['F'],
-    'D': [],
-    'E': ['G'],
-    'F': [],
-    'G': []
+    "A": ["B", "C"],
+    "B": ["D", "E"],
+    "C": ["F"],
+    "D": [],
+    "E": [],
+    "F": []
 }
 
-start = 'A'
-goal = 'G'
+start = "A"
+goal = "F"
 
 queue = deque([start])
-visited = []
+visited = [start]
 
 while queue:
     node = queue.popleft()
 
-    if node not in visited:
-        visited.append(node)
-        print(node)
+    print(node)
 
-        if node == goal:
-            print("Goal found:", node)
-            break
+    # Goal check
+    if node == goal:
+        print("Goal found")
+        break
 
-        for neighbour in graph[node]:
-            if neighbour not in visited:
-                queue.append(neighbour)
+    # Explore neighbours
+    for neighbour in graph[node]:
+        if neighbour not in visited:
+            visited.append(neighbour)
+            queue.append(neighbour)
