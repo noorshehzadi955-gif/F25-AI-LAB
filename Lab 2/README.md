@@ -1,4 +1,4 @@
-# Lab 2 - Intelligent Agents and PEAS
+ # Lab 2 - Intelligent Agents and PEAS
 
 This folder contains the classroom agent code, test cases,
 program outputs, and Lab 2 report.
