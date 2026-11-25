@@ -1,4 +1,4 @@
-# Minimax and Alpha-Beta Pruning
+ Minimax and Alpha-Beta Pruning
 
 values = [3, 5, 2, 9, 3, 5, 2, 9]
 
