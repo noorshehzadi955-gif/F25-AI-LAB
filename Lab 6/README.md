@@ -1,54 +1,52 @@
-# Lab 6 – Tokenization and FAQ Chatbot
+# Lab 6 - Task 1: Tokenization and a FAQ Chatbot
 
-## Objective
-The objective of this task is to understand text tokenization techniques and create a simple FAQ chatbot using TF-IDF.
-
-## Task 1: Tokenization
-- Compared whitespace splitting and regex-based tokenization.
-- Tested punctuation, contractions, email addresses, CS4944, empty text, and Urdu text.
-- Printed token lists and token counts.
-- Discussed tokenization differences and normalization risks.
-
-## Task 2: FAQ Chatbot
-- Created a simple FAQ chatbot using TF-IDF.
-- Added frequently asked questions with answers and source labels.
-- Tested exact answers, suggestions, empty input, and unsupported questions.
-- Used confirmation for non-exact questions to avoid incorrect answers.
+## Scope
+This folder completes Task 1 (Beginner) only. Tasks 2 and 3 are not included.
 
 ## Files
-- `task1_tokens.py` – Tokenization comparison.
-- `lab6_search.py` – TF-IDF retrieval system.
-- `guided_chatbot.py` – FAQ chatbot.
-- `task1_chatbot_check.py` – Chatbot testing.
-- `requirements.txt` – Required Python package.
-- `outputs/` – Program output files.
-- `Lab6_Report.docx` – Lab report.
+- `task1_tokens.py` - compares whitespace and Unicode word-like regex tokens for six required inputs.
+- `lab6_search.py` - TF-IDF retrieval helper.
+- `guided_chatbot.py` - interactive FAQ chatbot with five FAQs.
+- `task1_chatbot_check.py` - tests exact answer, suggestion, empty input and unsupported input.
+- `requirements.txt` - required package.
+- `Lab6_Report.docx` - explanation and actual outputs.
+- `outputs/` - captured terminal outputs and chatbot transcript.
 
-## How to Run
-
-Install the required package:
+## Setup
+Python 3.10 or newer is recommended.
 
 ```bash
-pip install -r requirements.txt
+python -m venv .venv
 ```
 
-Run tokenization:
+Windows PowerShell:
+```powershell
+.venv\\Scripts\\Activate.ps1
+```
 
+Install:
+```bash
+python -m pip install -r requirements.txt
+```
+
+## Run
 ```bash
 python task1_tokens.py
-```
-
-Run the chatbot:
-
-```bash
 python guided_chatbot.py
-```
-
-Run chatbot tests:
-
-```bash
 python task1_chatbot_check.py
 ```
 
-## Conclusion
-This task demonstrates basic tokenization methods and a TF-IDF-based FAQ chatbot with source labels and suggestion handling.
+## Optional model tokenizer
+To enable the model subword comparison, install `sentence-transformers`. The first run may download the model:
+```bash
+python -m pip install sentence-transformers
+```
+If it is unavailable, the required whitespace and regex comparison still runs.
+
+## Chatbot behavior
+- Exact stored question: returns answer and source.
+- Nonexact question: displays possible FAQ suggestions for confirmation.
+- Empty input: asks the user to enter a question.
+- Unsupported query: displays a help-desk fallback.
+
+The FAQ records are synthetic teaching examples. Their source filenames are illustrative labels, not verified university policy documents.
